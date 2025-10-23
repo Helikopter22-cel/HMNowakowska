@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helena Marianna Nowakowska</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.png" alt="Logo" class="logo-header">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">O mnie</a>
+    <a href="#gallery">Galeria</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+</header>
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <img src="images/logo.png" alt="Logo" class="hero-logo">
+    <h1>Helena Marianna Nowakowska</h1>
+    <h2>malarstwo i rysunek</h2>
+    <p>Spróbuj zwolnić, zobacz rytm, harmonię, taniec światła i cienia.</p>
+  </div>
+</section>
+
+    <section class="social-bar">
+  <p>Zostań ze mną na dłużej</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/hmnowakowska.art?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@czesciejbrudnanizczysta?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+    </a>
+  </div>
+</section>
+
+<section id="about" class="short-about">
+  <div class="section-content">
+    <div class="about-left">
+      <img src="images/sylwetka.jpg" alt="Sylwetka Heleny Marianny Nowakowskiej">
+    </div>
+    <div class="about-right">
+      <h2>O mnie</h2>
+      <p>
+        Zapraszam Cię do przestrzeni pełnej światła, cienia i rytmu. To tutaj codzienność – schody, poręcze, ściany czy korytarze – stają się sceną dla gry promieni, geometrii i załamań.
+        Doświadcz rytmu schodów, harmonii obrazów i spróbuj odnaleźć w zgiełku bodźców chwilę równowagi. Zatrzymaj się i zobacz, co potrafi światło.
+      </p>
+      <a href="about-full.html" class="button">Zobacz więcej</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="section-content">
+    <h2>Galeria</h2>
+
+    <div class="gallery-images">
+      <div class="gallery-item" onclick="openModal(this, 'images/obraz1.jpg', 'Światłoczułe I, 2025, olej na płótnie, 180 x 60 cm', 'Pierwszy obraz z serii Światłoczułe – eksploracja światła, rytmu i przestrzeni.')">
+        <img src="images/obraz1.jpg" alt="Obraz 1">
+        <p class="caption">Światłoczułe I, 2025, olej na płótnie, 180 x 60 cm</p>
+      </div>
+
+      <div class="gallery-item" onclick="openModal(this, 'images/obraz2.jpg', 'Światłoczułe II, 2025, olej na płótnie, 180 x 60 cm', 'Kontynuacja cyklu – gra między cieniem a kolorem, między ciałem a światłem.')">
+        <img src="images/obraz2.jpg" alt="Obraz 2">
+        <p class="caption">Światłoczułe II, 2025, olej na płótnie, 180 x 60 cm</p>
+      </div>
+
+      <div class="gallery-item" onclick="openModal(this, 'images/obraz3.jpg', 'W rytmie V, 2023, olej na płótnie, 100 x 120 cm', 'Obraz badający rytm i harmonię form geometrycznych w ruchu.')">
+        <img src="images/obraz3.jpg" alt="Obraz 3">
+        <p class="caption">W rytmie V, 2023, olej na płótnie, 100 x 120 cm</p>
+      </div>
+    </div>
+
+    <a href="galeria.html" class="button gallery-button">Zobacz więcej</a>
+  </div>
+</section>
+
+<!-- ===== MODAL (powiększone zdjęcie) ===== -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="modalCaption"></div>
+  <p id="modalDescription"></p>
+</div>
+
+<section id="contact" class="contact-section">
+  <div class="contact-content">
+    <h2>Skontaktuj się ze mną</h2>
+    <p>Masz pytania, chcesz nawiązać współpracę lub dowiedzieć się więcej o moich pracach? Napisz do mnie.</p>
+
+    <form action="https://formspree.io/f/manpgbby" method="POST">
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Imię i nazwisko" required>
+  </div>
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Adres e-mail" required>
+  </div>
+  <div class="form-group">
+    <textarea name="message" rows="5" placeholder="Twoja wiadomość" required></textarea>
+  </div>
+  <button type="submit" class="button contact-button">Wyślij wiadomość</button>
+</from>
+ </div>
+</section>
+
+<footer>
+  <p>© 2025 Helena Marianna Nowakowska</p>
+</footer>
+
+<script>
+function openModal(element, imageSrc, title, description) {
+  const modal = document.getElementById('imageModal');
+  document.getElementById('modalImage').src = imageSrc;
+  document.getElementById('modalCaption').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  modal.style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('imageModal').style.display = 'none';
+}
+
+// zamknięcie modala po kliknięciu w tło
+window.onclick = function(event) {
+  const modal = document.getElementById('imageModal');
+  if (event.target === modal) {
+    closeModal();
+  }
+ };
+</script>
+
+</body>
+
+</html>
