@@ -251,26 +251,19 @@ nav a:hover {
   transform: translateY(-2px);
 }
 /* --- RESPONSYWNOŚĆ short about --- */
+/* --- RESPONSYWNOŚĆ short about --- */
 @media (max-width: 1024px) {
-  .short-about{
-    gap: 30px;  /* mniejsze przerwy na średnich ekranach */
+  .short-about {
+    gap: 30px;
   }
-    .short-about .about-left img {
-    
+  .short-about .about-left img {
     align-items: center;
     gap: 20px;
   }
-
 }
 
+/* --- RESPONSYWNOŚĆ nawigacji i sekcji short-about na telefonach --- */
 @media (max-width: 768px) {
-.short-about {
-    height: auto;         /* pozwala sekcji rozciągać się z zawartością */
-    padding: 60px 20px;   /* trochę więcej oddechu */
-  }
-
-/* --- RESPONSYWNOŚĆ nawigacji--- */
-@media(max-width: 768px) {
   nav a { 
     margin: 0 10px;
     font-size: 0.9rem;
@@ -280,10 +273,26 @@ nav a:hover {
 
   .hero-logo { max-height: 80px; }
 
-  .short-about .section-content { flex-direction: column; align-items: center; }
-  .short-about .about-left img { width: 80%; margin-bottom: 20px; }
-  .short-about .about-right p { text-align: center; }
+  .short-about {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .short-about .section-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .short-about .about-left img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .short-about .about-right p {
+    text-align: center;
+  }
 }
+
 .gallery {
   height: 100vh;                 /* pełna wysokość ekranu */
   display: flex;
@@ -361,17 +370,20 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* --- RESPONSYWNOŚĆ --- */
-@media (max-width: 768px) {
-  .gallery {
-    height: auto;         /* usuwa sztywne ograniczenie wysokości */
-    padding: 60px 20px;   /* trochę więcej miejsca */
-  }
+
+/* --- RESPONSYWNOŚĆ GALERII --- */
 @media (max-width: 1024px) {
   .gallery-images {
-    gap: 30px;  /* mniejsze przerwy na średnich ekranach */
+    gap: 30px;
   }
 }
+
+@media (max-width: 768px) {
+  .gallery {
+    height: auto;
+    padding: 60px 20px;
+  }
+
   .gallery-images {
     flex-direction: column;
     align-items: center;
@@ -382,6 +394,7 @@ nav a:hover {
     max-width: 90%;
   }
 }
+
 
 /* --- MODAL --- */
 .modal {
