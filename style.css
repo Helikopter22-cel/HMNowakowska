@@ -64,6 +64,12 @@ nav a:hover {
   position: relative;
   box-sizing: border-box;
 }
+/* --- WERSJA MOBILNA: inne tło na telefonach --- */
+@media (max-width: 768px) {
+  .hero {
+    background: url('images/tlo_mobilne.jpg') center/cover no-repeat;
+  }
+}
 
 .hero .overlay {
   position: absolute;
