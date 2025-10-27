@@ -534,7 +534,8 @@ form {
 @media (max-width: 768px) {
   .contact {
     background: url('images/tlo_kontakt_mobilne.jpg') center/cover no-repeat;
-
+  }
+}
 .contact-button:hover {
   background-color: #5b5b5e;
   transform: translateY(-2px);
