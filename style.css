@@ -349,7 +349,11 @@ nav a:hover {
     height: auto;         /* usuwa sztywne ograniczenie wysokości */
     padding: 60px 20px;   /* trochę więcej miejsca */
   }
-
+@media (max-width: 1024px) {
+  .gallery-images {
+    gap: 30px;  /* mniejsze przerwy na średnich ekranach */
+  }
+}
   .gallery-images {
     flex-direction: column;
     align-items: center;
