@@ -255,6 +255,12 @@ nav a:hover {
   .short-about{
     gap: 30px;  /* mniejsze przerwy na średnich ekranach */
   }
+    .short-about .about-left img {
+    
+    align-items: center;
+    gap: 20px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -524,6 +530,10 @@ form {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+  /* --- WERSJA MOBILNA: inne tło na telefonach --- */
+@media (max-width: 768px) {
+  .contact {
+    background: url('images/tlo_kontakt_mobilne.jpg') center/cover no-repeat;
 
 .contact-button:hover {
   background-color: #5b5b5e;
