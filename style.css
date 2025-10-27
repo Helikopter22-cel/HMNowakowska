@@ -250,8 +250,20 @@ nav a:hover {
   color: #ffffff;
   transform: translateY(-2px);
 }
+/* --- RESPONSYWNOŚĆ short about --- */
+@media (max-width: 1024px) {
+  .short-about{
+    gap: 30px;  /* mniejsze przerwy na średnich ekranach */
+  }
+}
 
-/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 768px) {
+.short-about {
+    height: auto;         /* pozwala sekcji rozciągać się z zawartością */
+    padding: 60px 20px;   /* trochę więcej oddechu */
+  }
+
+/* --- RESPONSYWNOŚĆ nawigacji--- */
 @media(max-width: 768px) {
   nav a { 
     margin: 0 10px;
