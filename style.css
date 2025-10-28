@@ -548,7 +548,7 @@ form {
 }
   /* --- WERSJA MOBILNA: inne tło na telefonach --- */
 @media (max-width: 768px) {
-  .contact {
+  .contact-section {
     background: url('images/tlo_kontakt_mobilne.jpg') center/cover no-repeat;
   }
 }
