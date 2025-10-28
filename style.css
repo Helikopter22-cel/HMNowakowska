@@ -550,10 +550,15 @@ form {
   cursor: pointer;
 }
   /* --- WERSJA MOBILNA: inne tło na telefonach --- */
-@media (max-width: 768px) {
-  .contact-section {
-    background: url('images/tlo_kontakt_mobilne.jpg') center/cover no-repeat;
+
+  @media (max-width: 768px) {
+  .contact-section::before {
+    background-image: url('images/tlo_kontakt_mobilne.jpg');
+    background-position: center;
+    background-size: cover;
   }
+}
+
 }
 .contact-button:hover {
   background-color: #5b5b5e;
