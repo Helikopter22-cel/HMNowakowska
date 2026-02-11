@@ -12,7 +12,8 @@ body, html {
 	overflow-x: hidden;
 }
 section {
-  height: 100vh;        /* każda sekcja zajmuje cały ekran */
+  min-height: 100vh;
+  height: auto;        /* każda sekcja zajmuje cały ekran */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,7 +173,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   overflow: hidden;
  box-sizing: border-box;
 }
@@ -267,7 +269,8 @@ nav a:hover {
   .short-about .about-right p { text-align: center; }
 }
 .gallery {
-  height: 100vh;                 /* pełna wysokość ekranu */
+  min-height: 100vh;
+  height: auto;                /* pełna wysokość ekranu */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,7 +418,8 @@ nav a:hover {
 /* --- KONTAKT Z TŁEM --- */
 .contact-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
