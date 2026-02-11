@@ -1,0 +1,238 @@
+/* ============================
+   FULL GALLERY PAGE
+============================ */
+.gallery-page {
+  background-color: #2d363d;
+  color: #f8f8f8;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ============================
+   HEADER
+============================ */
+.gallery-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(0px);
+  z-index: 100;
+}
+
+/* przycisk powrotu */
+.back-button {
+  position: absolute;
+  left: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.back-button:hover {
+  color: #a9bcd0;
+}
+
+/* ============================
+   HERO BANNER NAD GALERIĄ
+============================ */
+.gallery-hero {
+  position: relative;
+    margin-top: 100px;
+  width: 100%;
+  height: 200px; /* wąski pasek */
+  background-image: url("images/tlo_galeria.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 60px; /* odstęp od galerii poniżej */
+}
+
+/* efekt lekkiego rozmycia tła */
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px) brightness(0.8);
+  -webkit-backdrop-filter: blur(8px) brightness(0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* napis */
+.gallery-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+/* ============================
+   GŁÓWNY BLOK GALERII
+============================ */
+.full-gallery {
+  padding: 100px 60px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-gallery h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* ============================
+   UKŁAD SIATKI
+============================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 obrazy w rzędzie */
+  gap: 60px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* na tabletach po 2 */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* na telefonie 1 */
+  }
+}
+
+/* ============================
+   KAFELKI
+============================ */
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* MINIATURY – jednolite proporcje */
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* wszystkie pionowe proporcje */
+  object-fit: cover;     /* wypełnia równo kafelek */
+  border-radius: 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+/* efekt hover – bez kadrowania całego kafla */
+.gallery-item img:hover {
+  transform: scale(1.07);
+}
+
+.gallery-item .caption {
+  margin-top: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+
+/* ============================
+   MODAL (podgląd zdjęć)
+============================ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px; /* odstęp od krawędzi ekranu */
+  box-sizing: border-box;
+}
+
+.modal-content {
+  margin: 0 auto;
+  display: block;
+  max-width: 80vw;      /* prawie cała szerokość ekranu */
+  max-height: 85vh;     /* prawie cała wysokość */
+  border: 2px solid #fff;
+  animation: zoomIn 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+
+#modalCaption {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+#modalDescription {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ccc;
+  max-width: 70%;
+  line-height: 1.6;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #a9bcd0;
+}
+
+/* animacja modala */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ============================
+   STOPKA
+============================ */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #f8f8f8;
+}

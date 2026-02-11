@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galeria – Helena Marianna Nowakowska</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery-full.css">
+</head>
+<body class="gallery-page">
+
+  <!-- NAGŁÓWEK -->
+  <header class="gallery-header">
+    <a href="index.html" class="back-button">← Powrót</a>
+  </header>
+
+  <!-- BANNER POD NAGŁÓWKIEM -->
+  <section class="gallery-hero" aria-hidden="true">
+    <div class="gallery-hero-overlay"></div>
+    <h1>Pełna Galeria</h1>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="full-gallery">
+    <div class="gallery-grid">
+      <!-- przykładowe 6 elementów -->
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca1.jpg" alt="Obraz 1" data-description="Szczegółowy opis obrazu 1"></div>
+        <p class="caption">Obraz 1</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca2.jpg" alt="Obraz 2" data-description="Szczegółowy opis obrazu 2"></div>
+        <p class="caption">Obraz 2</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca3.jpg" alt="Obraz 3" data-description="Szczegółowy opis obrazu 3"></div>
+        <p class="caption">Obraz 3</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca4.jpg" alt="Obraz 4" data-description="Szczegółowy opis obrazu 4"></div>
+        <p class="caption">Obraz 4</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca5.jpg" alt="Obraz 5" data-description="Szczegółowy opis obrazu 5"></div>
+        <p class="caption">Obraz 5</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca6.jpg" alt="Obraz 6" data-description="Szczegółowy opis obrazu 6"></div>
+        <p class="caption">Obraz 6</p>
+      </div>
+    
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca7.jpg" alt="Obraz 7" data-description="Szczegółowy opis obrazu 7"></div>
+        <p class="caption">Obraz 6</p>
+      </div>
+       
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca8.jpg" alt="Obraz 8" data-description="Szczegółowy opis obrazu 6"></div>
+        <p class="caption">Obraz 6</p>
+      </div>
+       
+      <div class="gallery-item">
+        <div class="img-wrap"><img src="images/praca9.jpg" alt="Obraz 9" data-description="Szczegółowy opis obrazu 6"></div>
+        <p class="caption">Obraz 6</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL (okno podglądu) -->
+  <div id="imageModal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <img id="modalImg" class="modal-content" alt="">
+      <div id="modalCaption"></div>
+      <div id="modalDescription"></div>
+    </div>
+    <div class="close" id="modalClose" role="button" aria-label="Zamknij">&times;</div>
+  </div>
+
+  <footer>
+    <p>© 2025 Helena Marianna Nowakowska</p>
+  </footer>
+
+  <!-- SKRYPT GALERII -->
+  <script>
+    (function(){
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      const modalCaption = document.getElementById("modalCaption");
+      const modalDescription = document.getElementById("modalDescription");
+      const closeBtn = document.getElementById("modalClose");
+
+      document.querySelectorAll(".gallery-item .img-wrap img").forEach(img => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex";
+          modal.setAttribute('aria-hidden','false');
+          modalImg.src = img.src;
+          modalImg.alt = img.alt || '';
+          modalCaption.textContent = img.alt || '';
+          modalDescription.textContent = img.dataset.description || '';
+          // przewiń modal tak, aby opis nie był "przyklejony do dołu"
+          modal.scrollTop = 0;
+        });
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = "none";
+        modal.setAttribute('aria-hidden','true');
+        modalImg.src = '';
+      });
+
+      // zamknięcie kliknięciem poza modal-inner
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          modal.setAttribute('aria-hidden','true');
+          modalImg.src = '';
+        }
+      });
+
+      // ESC zamyka modal
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden','true');
+          modalImg.src = '';
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
