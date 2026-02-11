@@ -388,26 +388,22 @@ nav a:hover {
 /* --- RESPONSYWNOŚĆ GALERII --- */
 @media (max-width: 1024px) {
   .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .gallery {
-    height: auto;
-    padding: 60px 20px;
-  }
-
   .gallery-images {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
   .gallery-item {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
+
 
 
 /* --- MODAL --- */
