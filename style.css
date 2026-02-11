@@ -267,7 +267,8 @@ nav a:hover {
   .short-about .about-right p { text-align: center; }
 }
 .gallery {
-  height: 100vh;                 /* pełna wysokość ekranu */
+   min-height: 100vh;
+  height: auto;                 /* pełna wysokość ekranu */
   display: flex;
   justify-content: center;
   align-items: center;
