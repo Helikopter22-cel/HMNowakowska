@@ -533,26 +533,13 @@ footer {
   background-color: #222; /* ciemny szary/czarny */
   color: #f8f8f8;         /* kolor tekstu */
 }
+/* --- RESPONSYWNOŚĆ --- */
 @media (max-width: 768px) {
   .hero {
     background-image: url('images/tlo_mobile.jpg'); /* tu wstaw swoje mobilne */
     background-position: center;
   } 
-	.contact-section {
-    background-image: url('images/tlo_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
-    background-position: center;
-	}
-}
-/* --- RESPONSYWNOŚĆ --- */
-@media (max-width: 1024px) {
-  .gallery-images {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-    .short-about {
+	    .short-about {
     height: auto;
     min-height: 100vh;
     padding: 100px 20px 80px 20px;
@@ -564,5 +551,16 @@ footer {
 
   .gallery-item {
     max-width: 100%;
+  }
+	.contact-section {
+    background-image: url('images/tlo_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-position: center;
+	}
+}
+
+@media (max-width: 1024px) {
+  .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
