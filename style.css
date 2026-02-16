@@ -12,7 +12,7 @@ body, html {
 	overflow-x: hidden;
 }
 section {
-  min-height: 100vh;        /* każda sekcja zajmuje cały ekran */
+ height: 100vh;        /* każda sekcja zajmuje cały ekran */
   display: flex;
   justify-content: center;
   align-items: center;
