@@ -552,7 +552,7 @@ footer {
   .gallery-item {
     max-width: 100%;
   }
-	.contact-section {
+	.contact-section::before{
     background-image: url('images/tlo_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
     background-position: center;
 	}
