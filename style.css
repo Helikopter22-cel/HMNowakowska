@@ -112,12 +112,8 @@ nav a:hover {
 .hero-content p {
   font-size: 1.2rem;
 }
-@media (max-width: 768px) {
-  .hero {
-    background-image: url('images/tlo_mobile.jpg'); /* tu wstaw swoje mobilne */
-    background-position: center;
-  }
-}
+
+
 
 /* --- Pasek społecznościowy między sekcjami --- */
 .social-bar {
@@ -376,24 +372,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* --- RESPONSYWNOŚĆ --- */
-@media (max-width: 1024px) {
-  .gallery-images {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
 
-@media (max-width: 768px) {
-  .gallery-images {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .gallery-item {
-    max-width: 100%;
-  }
-}
 
 /* --- MODAL --- */
 .modal {
@@ -547,15 +526,38 @@ form {
   background-color: #5b5b5e;
   transform: translateY(-2px);
 }
-@media (max-width: 768px) {
-  .contact-section {
-    background-image: url('images/tlo_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
-    background-position: center;
-  }
-}
+
 footer {
   text-align: center;
   padding: 20px;
   background-color: #222; /* ciemny szary/czarny */
   color: #f8f8f8;         /* kolor tekstu */
+}
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('images/tlo_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-position: center;
+  } 
+	.contact-section {
+    background-image: url('images/tlo_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-position: center;
+	}
+}
+/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 1024px) {
+  .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+  }
 }
