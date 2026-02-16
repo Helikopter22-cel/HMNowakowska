@@ -59,7 +59,7 @@ nav a:hover {
 
 /* --- HERO --- */
 .hero {
-  height: 100vh - 80px;
+  height: calc(100vh - 80px);
   background-image: url('images/moje_tlo.jpg');
   background-size: cover;
   background-position: center 25%;
@@ -68,8 +68,8 @@ nav a:hover {
   align-items: center;
   text-align: center;
   position: relative;
-  box-sizing: border-box;
 }
+
 
 .hero .overlay {
   position: absolute;
@@ -112,6 +112,13 @@ nav a:hover {
 .hero-content p {
   font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('images/tlo_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-position: center;
+  }
+}
+
 /* --- Pasek społecznościowy między sekcjami --- */
 .social-bar {
   background-color: rgba(0, 0, 0, 0.7);
