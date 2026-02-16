@@ -549,7 +549,7 @@ form {
 }
 @media (max-width: 768px) {
   .contact-section {
-    background-image: url('images/moje_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-image: url('images/tlo_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
     background-position: center;
   }
 }
