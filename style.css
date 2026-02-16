@@ -547,6 +547,12 @@ form {
   background-color: #5b5b5e;
   transform: translateY(-2px);
 }
+@media (max-width: 768px) {
+  .contact-section {
+    background-image: url('images/moje_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-position: center;
+  }
+}
 footer {
   text-align: center;
   padding: 20px;
