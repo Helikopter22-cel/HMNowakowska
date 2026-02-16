@@ -552,7 +552,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .gallery-images {
+    .short-about {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 20px 80px 20px;
+  }
+	.gallery-images {
     grid-template-columns: 1fr;
     gap: 20px;
   }
