@@ -271,7 +271,7 @@ nav a:hover {
     width: 80%;
   }
 
-}
+
 .gallery {
    min-height: 100vh;
   height: auto;                 /* pełna wysokość ekranu */
@@ -519,6 +519,12 @@ footer {
   color: #f8f8f8;         /* kolor tekstu */
 }
 /* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 1200px) {
+  .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
 @media (max-width: 900px) {
   .hero {
     background-image: url('images/tlo_mobile.jpg'); /* tu wstaw swoje mobilne */
@@ -557,9 +563,4 @@ footer {
 	}
 }
 
-@media (max-width: 1200px) {
-  .gallery-images {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
+
