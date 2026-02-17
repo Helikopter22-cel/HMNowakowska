@@ -527,7 +527,7 @@ footer {
 }
 @media (max-width: 900px) {
   .hero {
-    background-image: url('images/tlo_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-image: url('images/tlo_mobilne.jpg'); /* tu wstaw swoje mobilne */
     background-position: center;
   } 
  nav {
@@ -558,7 +558,7 @@ footer {
     max-width: 100%;
   }
 	.contact-section::before{
-    background-image: url('images/tlo_kontakt_mobile.jpg'); /* tu wstaw swoje mobilne */
+    background-image: url('images/tlo_kontakt_mobilne.jpg'); /* tu wstaw swoje mobilne */
     background-position: center;
 	}
 }
