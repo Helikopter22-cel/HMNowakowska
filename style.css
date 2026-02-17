@@ -254,21 +254,6 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* --- RESPONSYWNOŚĆ --- */
-@media(max-width: 768px) {
- nav {
-    flex-wrap: nowrap;
-    gap: 15px;
-  }
-
-	nav a { 
-    margin: 0 10px;
-    font-size: 0.9rem;
-  }
-
-  .logo-header { max-height: 40px; left: 10px; }
-
-  .hero-logo { max-height: 80px; }
 
   .short-about .section-content {
     flex-direction: column;
@@ -539,6 +524,20 @@ footer {
     background-image: url('images/tlo_mobile.jpg'); /* tu wstaw swoje mobilne */
     background-position: center;
   } 
+ nav {
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+
+	nav a { 
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .logo-header { max-height: 40px; left: 10px; }
+
+  .hero-logo { max-height: 80px; }
+
 	    .short-about {
     height: auto;
     min-height: 100vh;
