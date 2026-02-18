@@ -255,23 +255,6 @@ nav a:hover {
 }
 
 
-  .short-about .section-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .short-about .about-left {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .short-about .about-left img {
-    width: 80%;
-  }
-
-
 .gallery {
    min-height: 100vh;
   height: auto;                 /* pełna wysokość ekranu */
