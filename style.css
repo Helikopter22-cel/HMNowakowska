@@ -526,6 +526,12 @@ footer {
   .logo-header { max-height: 40px; left: 10px; }
 
   .hero-logo { max-height: 80px; }
+	
+.short-about {
+  height: auto;
+  min-height: 100vh;
+  padding: 120px 20px 80px 20px;
+}
 
 .short-about .section-content {
     flex-direction: column;
@@ -543,7 +549,10 @@ footer {
     width: 80%;
     max-width: 350px;
   }
-
+  .short-about .about-right p {
+    text-align: left;
+    padding: 0 10px;
+  }
 	.gallery-images {
     grid-template-columns: 1fr;
     gap: 20px;
